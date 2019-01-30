@@ -1,1 +1,3 @@
-cash = 0
+var cash = 0
+function cashClick(number) {
+  
