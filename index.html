@@ -1,7 +1,10 @@
-<form id="pentest" name="pentest" method="POST" data-netlify="true">
-  Username:<br>
-  <input type="text" name="username"><br>
-  Password:<br>
-  <input type="text" name="password">
-  <input type="submit" value="Submit">
-</form>
+<span id="cookies">0</span>
+<button onclick="cookieClick(1)">Click Me!</button>
+<script>
+cookies=0
+  
+function cookieClick(number){
+    cookies = cookies + number;
+    document.getElementById("cookies").innerHTML = cookies;
+};
+</script>
