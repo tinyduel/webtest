@@ -1,5 +1,5 @@
 var cash = 0
-function cashClick(number) {
+function cashGet(number) {
   cash = cash + number;
   document.getElementById("cash").innerHTML = cash;
 };
