@@ -9,6 +9,7 @@ function buyKeyboards(){
     if (cash >= keyboardCost)
 	    cash = cash - keyboardCost;
 	    keyboards = keyboards + 1
+     };
 };
 
 window.setInterval(function(){
