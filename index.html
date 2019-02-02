@@ -1,24 +1,2 @@
-<title>c0d1ng s1mul8r</title>
-<center><font size="+10" face="courier" weight="bold">$<span id="cash">0</span></font></center>
-<center><button onclick="cashClick(1)">Code</button></center>
-<button onclick="buyKeyboard()">Buy a mechanical keyboard: <span id="keyboards">0</span></button>
-<script type="text/javascript">
-var cash = 0
-function cashGet(number) {
-  cash = cash + number;
-  document.getElementById("cash").innerHTML = cash;
-};
-var keyboards = 0
-var keyboardCost = 10
-function buyKeyboards(){
-    if (cash >= keyboardCost)
-	    cash = cash - keyboardCost;
-	    keyboards = keyboards + 1
-     };
-};
-
-window.setInterval(function(){
-	
-	cashClick(keyboards);
-	
-}, 1000);</script>
+<iframe src="index.html">
+HELOOO
