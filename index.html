@@ -15,4 +15,16 @@ function load() {
   var savegame = JSON.parse(localStorage.getItem("save"));
   if (typeof savegame.content !== "undefined") box.value = savegame.content;
 };
+var mouseDown = 0;
+document.body.onmousedown = function() { 
+  ++mouseDown;
+}
+document.body.onmouseup = function() {
+  --mouseDown;
+}
+if (mousedown) {
+  erase = 1
+} else {
+  erase = 0
+};
 </script>
