@@ -1,5 +1,6 @@
+<body onLoad="load()">
 <textarea id="box"></textarea><div id ="out"></div>
-<button onclick="doit()">Go</button>
+<button onclick="doit(); save();">Go</button>
 <script>function doit()  {
   var x = box.value; out.innerHTML = x};
 function save() {
@@ -12,4 +13,5 @@ function load() {
   var savegame = JSON.parse(localStorage.getItem("save"));
   if (typeof savegame.content !== "undefined") box.value = savegame.content;
 };
+  
 </script>
