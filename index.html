@@ -8,4 +8,8 @@ function save() {
   }
   localStorage.setItem("save",JSON.stringify(save));
 };
+function load() {
+  var savegame = JSON.parse(localStorage.getItem("save"));
+  if (typeof savegame.content !== "undefined") box.value = savegame.content;
+};
 </script>
