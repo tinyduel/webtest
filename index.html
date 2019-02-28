@@ -1,7 +1,9 @@
 <body onLoad="load(); doit();">
 <textarea id="box"></textarea><div id ="out"></div>
 <button onclick="doit(); save();">Go</button>
-<script>function doit()  {
+<script>
+  var erase = 0
+  function doit()  {
   var x = box.value; out.innerHTML = x};
 function save() {
   var save = {
