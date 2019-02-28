@@ -2,4 +2,10 @@
 <button onclick="doit()">Go</button>
 <script>function doit()  {
   var x = box.value; out.innerHTML = x};
+function save() {
+  var save = {
+    content = box.value;
+  }
+  localStorage.setItem("save",JSON.stringify(save));
+};
 </script>
