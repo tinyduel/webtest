@@ -23,7 +23,7 @@
 <input type="checkbox" id="5,3">
 <input type="checkbox" id="5,4">
 <input type="checkbox" id="5,5"><br>
-
+<div id="result"></div>
 <script>
 var loc = [2,2];
 document.onkeydown = checkKey;
@@ -34,22 +34,38 @@ function checkKey(e) {
 
     if (e.keyCode == '38') {
         console.log("up")
-        loc[0]--
+        if (document.getElementById(ploc).checked = false) {
+		loc[0]--
+	} else {
+		result.innerHTML = "You Lost"
+	}
     }
     else if (e.keyCode == '40') {
         // down arrow
-        loc[0]++
+	if (document.getElementById(ploc).checked = false) {
+        	loc[0]++
+	} else {
+		result.innerHTML = "You Lost"
+	}
         console.log("down")
     }
     else if (e.keyCode == '37') {
        // left arrow
         console.log("left")
-        loc[1]--
+	if (document.getElementById(ploc).checked = false) {
+        	loc[1]--
+	} else {
+		result.innerHTML = "You Lost"
+	}
     }
     else if (e.keyCode == '39') {
        // right arrow
        console.log('right')
-       loc[1]++
+	if (document.getElementById(ploc).checked = false) {
+       		loc[1]++
+	} else {
+		result.innerHTML = "You Lost"
+	}
     }
 
 }
