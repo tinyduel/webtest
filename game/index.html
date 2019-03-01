@@ -1,1 +1,30 @@
-
+<body onLoad="load(); doit();">
+<textarea id="box"></textarea><div id ="out"></div>
+<button onclick="doit(); save();">Go</button>
+<script>
+  var erase = 0
+  function doit()  {
+  var x = box.value; out.innerHTML = x};
+function save() {
+  var save = {
+    content: box.value
+  }
+  localStorage.setItem("save",JSON.stringify(save));
+};
+function load() {
+  var savegame = JSON.parse(localStorage.getItem("save"));
+  if (typeof savegame.content !== "undefined") box.value = savegame.content;
+};
+var mouseDown = 0;
+document.body.onmousedown = function() { 
+  ++mouseDown;
+}
+document.body.onmouseup = function() {
+  --mouseDown;
+}
+if (mouseDown) {
+  erase = 1
+} else {
+  erase = 0
+};
+</script>
