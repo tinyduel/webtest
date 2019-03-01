@@ -34,11 +34,11 @@ function checkKey(e) {
 
     if (e.keyCode == '38') {
         console.log("up")
-        loc[0]++
+        loc[0]--
     }
     else if (e.keyCode == '40') {
         // down arrow
-        loc[0]--
+        loc[0]++
         console.log("down")
     }
     else if (e.keyCode == '37') {
@@ -58,5 +58,5 @@ window.setInterval(function(){
 	ploc=loc.join()
     document.getElementById(ploc).checked = true
 	
-}, 1000);
+}, 100);
 </script>
