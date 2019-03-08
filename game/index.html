@@ -458,8 +458,11 @@ window.setInterval(function(){
 	if (document.getElementById(ploc).checked = true) {
 		document.getElementById("result").value = "LOSE"
 		console.log("dead")
+	} else {
+		document.getElementById(ploc).checked = true
+		console.log("Live")
 	}
-	else {document.getElementById(ploc).checked = true}
+	
 	
 }, 1000);
 </script>
