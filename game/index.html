@@ -452,9 +452,10 @@ function checkKey(e) {
 window.setInterval(function(){
 	if (direction == 0) { loc[1]++}
 	else if (direction == 2) { loc[1]--}
-	else if (direction)
+	else if (direction == 3) { loc[0]++}
+	else if (direction == 1) { loc[0]--}
 	ploc=loc.join()
-    document.getElementById(ploc).checked = true
+	document.getElementById(ploc).checked = true
 	
 }, 1000);
 </script>
