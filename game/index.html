@@ -455,12 +455,14 @@ window.setInterval(function(){
 	else if (direction == 3) { loc[0]++}
 	else if (direction == 1) { loc[0]--}
 	ploc=loc.join()
+	console.log("ploc")
+	console.log(document.getElementById(ploc).checked)
 	if (document.getElementById(ploc).checked = true) {
 		document.getElementById("result").value = "LOSE"
-		console.log("dead")
+		//console.log("dead")
 	} else {
 		document.getElementById(ploc).checked = true
-		console.log("Live")
+		//console.log("Live")
 	}
 	
 	
