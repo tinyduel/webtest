@@ -418,7 +418,7 @@
 <input type="checkbox" onclick="loc[0]=parseInt(document.getElementById('20,19').id.charAt(0)); loc[1]=parseInt(document.getElementById('20,19').id.charAt(2))"id="20,19">
 <input type="checkbox" onclick="loc[0]=parseInt(document.getElementById('20,20').id.charAt(0)); loc[1]=parseInt(document.getElementById('20,20').id.charAt(2))"id="20,20">
 <br>
-
+<div id="result"></div>
 <script>
 var direction = 0
 var loc = [2,2];
@@ -455,7 +455,10 @@ window.setInterval(function(){
 	else if (direction == 3) { loc[0]++}
 	else if (direction == 1) { loc[0]--}
 	ploc=loc.join()
-	document.getElementById(ploc).checked = true
+	if (document.getElementById(ploc).checked == true) {
+		document.getElementById("result").value = "LOSE"
+	}
+	else {document.getElementById(ploc).checked = true}
 	
 }, 1000);
 </script>
