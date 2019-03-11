@@ -463,7 +463,7 @@ var interval = window.setInterval(function(){
 		console.log("YAY")
 		score++
 	} else if (document.getElementById(ploc).checked === true) {
-		document.getElementById("result").innerHTML = "GAME OVER - SCORE: " + score
+		document.getElementById("result").innerHTML = "GAME OVER - SCORE: " + score + " - Click to restart"
 		clearInterval(interval)
 	}
 	
