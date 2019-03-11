@@ -466,7 +466,7 @@ var interval = window.setInterval(function(){
 		document.getElementById("result").innerHTML = "GAME OVER - SCORE: " + score + " - Click to restart"
 		clearInterval(interval)
 	}
-	if (loc[0] > 20 || loc[1] > 20 || loc[0] < 1 || loc[1] < 1) {
+	if (loc[0] > 20 || loc[1] > 20 || loc[0] < 0 || loc[1] < 0) {
 		document.getElementById("result").innerHTML = "GAME OVER - SCORE: " + score + " - Click to restart"
 		clearInterval(interval)
 	}
