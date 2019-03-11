@@ -457,6 +457,7 @@ var interval = window.setInterval(function(){
 	else if (direction == 1) { loc[0]--}
 	ploc=loc.join()
 	console.log(ploc)
+	console.log(loc)
 	console.log(document.getElementById(ploc).checked)
 	if (document.getElementById(ploc).checked === false) {
 		document.getElementById(ploc).checked = true
@@ -469,6 +470,7 @@ var interval = window.setInterval(function(){
 	if (loc[0] > 20 === true|| loc[1] > 20 === true) {
 		document.getElementById("result").innerHTML = "GAME OVER - SCORE: " + score + " - Click to restart"
 		clearInterval(interval)
+		console.log("Gottem")
 	}
 	
 }, 100);
