@@ -420,6 +420,7 @@
 <br>
 <div id="result"></div>
 <script>
+var score = 0
 var direction = 0
 var loc = [2,2];
 document.onkeydown = checkKey;
@@ -460,8 +461,9 @@ window.setInterval(function(){
 	if (document.getElementById(ploc).checked === false) {
 		document.getElementById(ploc).checked = true
 		console.log("YAY")
+		score++
 	} else if (document.getElementById(ploc).checked === true) {
-		document.getElementById("result").value = "LOSE"
+		document.getElementById("result").innerHTML = "GAME OVER - SCORE: " + score
 	}
 	
 }, 1000);
