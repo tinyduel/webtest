@@ -458,7 +458,12 @@ var interval = window.setInterval(function(){
 	ploc=loc.join()
 	console.log(ploc)
 	console.log(loc)
-	console.log(document.getElementById(ploc).checked)
+	try {
+		console.log(document.getElementById(ploc).checked)
+	}
+	catch {
+		console.log("Gottem")
+	}
 	if (document.getElementById(ploc).checked === false) {
 		document.getElementById(ploc).checked = true
 		console.log("YAY")
