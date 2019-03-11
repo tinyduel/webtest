@@ -462,7 +462,8 @@ var interval = window.setInterval(function(){
 		document.getElementById(ploc).checked
 	}
 	catch {
-		console.log("Gottem")
+		document.getElementById("result").innerHTML = "GAME OVER - SCORE: " + score + " - Click to restart"
+		clearInterval(interval)
 	}
 	if (document.getElementById(ploc).checked === false) {
 		document.getElementById(ploc).checked = true
@@ -472,11 +473,7 @@ var interval = window.setInterval(function(){
 		document.getElementById("result").innerHTML = "GAME OVER - SCORE: " + score + " - Click to restart"
 		clearInterval(interval)
 	}
-	if (loc[0] > 20) {
-		document.getElementById("result").innerHTML = "GAME OVER - SCORE: " + score + " - Click to restart"
-		clearInterval(interval)
-		console.log("Gottem")
-	}
+	
 	
 }, 100);
 </script>
