@@ -1,3 +1,13 @@
+<style type="text/css">     
+    #chec input {
+        margin: 0;
+        padding: 0;
+        display:block;
+        height:12px;
+        overflow:hidden
+    }
+</style>
+<div id="chec">
 <input type="checkbox" onclick="loc[0]=parseInt(document.getElementById('1,1').id.charAt(0)); loc[1]=parseInt(document.getElementById('1,1').id.charAt(2))"id="1,1">
 <input type="checkbox" onclick="loc[0]=parseInt(document.getElementById('1,2').id.charAt(0)); loc[1]=parseInt(document.getElementById('1,2').id.charAt(2))"id="1,2">
 <input type="checkbox" onclick="loc[0]=parseInt(document.getElementById('1,3').id.charAt(0)); loc[1]=parseInt(document.getElementById('1,3').id.charAt(2))"id="1,3">
@@ -417,7 +427,7 @@
 <input type="checkbox" onclick="loc[0]=parseInt(document.getElementById('20,18').id.charAt(0)); loc[1]=parseInt(document.getElementById('20,18').id.charAt(2))"id="20,18">
 <input type="checkbox" onclick="loc[0]=parseInt(document.getElementById('20,19').id.charAt(0)); loc[1]=parseInt(document.getElementById('20,19').id.charAt(2))"id="20,19">
 <input type="checkbox" onclick="loc[0]=parseInt(document.getElementById('20,20').id.charAt(0)); loc[1]=parseInt(document.getElementById('20,20').id.charAt(2))"id="20,20">
-<br>
+<br></div>
 <div id="result" onclick="location.reload();"></div>
 <script>
 var score = 0
