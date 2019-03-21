@@ -470,11 +470,11 @@ var interval = window.setInterval(function(){
 	else if (aidir == 1) { ailoc[0]--}
 	ploc=loc.join()
 	aipos = ailoc.join()
-	document.getElementById(aipos).checked = true
 	console.log(ploc)
 	console.log(loc)
 	try {
 		document.getElementById(ploc).checked
+		document.getElementById(aipos).checked
 	}
 	catch {
 		document.getElementById("result").innerHTML = "GAME OVER - SCORE: " + score + " - Click to restart"
