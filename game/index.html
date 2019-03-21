@@ -426,6 +426,8 @@
 <br></div>
 <div id="result" onclick="location.reload();"></div>
 <script>
+var ailoc = [20,20];
+var aidir = 2;
 document.getElementById("1,1").checked = true
 var score = 0
 var direction = 0
@@ -462,7 +464,13 @@ var interval = window.setInterval(function(){
 	else if (direction == 2) { loc[1]--}
 	else if (direction == 3) { loc[0]++}
 	else if (direction == 1) { loc[0]--}
+	if (aidir == 0) { ailoc[1]++}
+	else if (aidir == 2) { ailoc[1]--}
+	else if (aidir == 3) { ailoc[0]++}
+	else if (aidir == 1) { ailoc[0]--}
 	ploc=loc.join()
+	aipos = ailoc.join()
+	document.getElementById(aipos).checked = true
 	console.log(ploc)
 	console.log(loc)
 	try {
