@@ -460,6 +460,7 @@ function checkKey(e) {
     }
 }
 var interval = window.setInterval(function(){
+	aidir = Math.floor(Math.random() * 4) + 1
 	if (direction == 0) { loc[1]++}
 	else if (direction == 2) { loc[1]--}
 	else if (direction == 3) { loc[0]++}
