@@ -459,10 +459,12 @@ function checkKey(e) {
        direction = 0
     }
 }
+var rand
 var interval = window.setInterval(function(){
-	var rand = Math.floor(Math.random() * 4)
+	rand = Math.floor(Math.random() * 4)
 	while (rand != aidir) {
 		rand = Math.floor(Math.random() * 4)
+		//if (rand != aidir)
 	}
 	aidir = rand;
 	console.log(aidir)
