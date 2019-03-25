@@ -465,6 +465,7 @@ var interval = window.setInterval(function(){
 		rand = Math.floor(Math.random() * 4)
 	}
 	aidir = rand;
+	console.log(aidir)
 	if (direction == 0) { loc[1]++}
 	else if (direction == 2) { loc[1]--}
 	else if (direction == 3) { loc[0]++}
@@ -475,8 +476,8 @@ var interval = window.setInterval(function(){
 	else if (aidir == 1) { ailoc[0]--}
 	ploc=loc.join()
 	aipos = ailoc.join()
-	console.log(ploc)
-	console.log(loc)
+	//console.log(ploc)
+	//console.log(loc)
 	try {
 		document.getElementById(ploc).checked
 		document.getElementById(aipos).checked = true
@@ -487,7 +488,7 @@ var interval = window.setInterval(function(){
 	}
 	if (document.getElementById(ploc).checked === false) {
 		document.getElementById(ploc).checked = true
-		console.log("YAY")
+		//console.log("YAY")
 		score++
 	} else if (document.getElementById(ploc).checked === true) {
 		document.getElementById("result").innerHTML = "GAME OVER - SCORE: " + score + " - Click to restart"
