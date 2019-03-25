@@ -462,10 +462,8 @@ function checkKey(e) {
 var rand
 var interval = window.setInterval(function(){
 	rand = Math.floor(Math.random() * 4)
-	while (rand != aidir) {
+	while (rand = aidir) {
 		rand = Math.floor(Math.random() * 4)
-		//if (rand != aidir)
-		console.log("AIJ")
 	}
 	aidir = rand;
 	console.log(aidir)
