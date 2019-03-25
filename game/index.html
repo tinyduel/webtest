@@ -474,7 +474,7 @@ var interval = window.setInterval(function(){
 	console.log(loc)
 	try {
 		document.getElementById(ploc).checked
-		document.getElementById(aipos).checked
+		document.getElementById(aipos).checked = true
 	}
 	catch {
 		document.getElementById("result").innerHTML = "GAME OVER - SCORE: " + score + " - Click to restart"
