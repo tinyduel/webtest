@@ -522,8 +522,9 @@ var interval = window.setInterval(function(){
 		document.getElementById("result").innerHTML = "GAME OVER - SCORE: " + score + " - Click to restart"
 		clearInterval(interval)
 	}
-	if (document.getElementById(ploc).checked === false) {
+	if (document.getElementById(ploc).checked === false || document.getElementById(wploc).checked === false) {
 		document.getElementById(ploc).checked = true
+		document.getElementById(wploc).checked = true
 		//console.log("YAY")
 		score++
 	} else if (document.getElementById(ploc).checked === true || document.getElementById(wploc).checked === true) {
