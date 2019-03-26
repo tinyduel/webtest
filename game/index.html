@@ -426,8 +426,8 @@
 <br></div>
 <div id="result" onclick="location.reload();"></div>
 <script>
-var ailoc = [15,15];
-var aidir = 2;
+var 2loc = [15,15];
+var 2dir = 2;
 document.getElementById("1,1").checked = true
 var score = 0
 var direction = 0
@@ -458,6 +458,29 @@ function checkKey(e) {
        //loc[1]++
        direction = 0
     }
+    else if (e.keyCode == '87') {
+        console.log("W")
+        //loc[0]--
+	2dir = 1
+    }
+    else if (e.keyCode == '83') {
+        // down arrow
+        //loc[0]++
+	2dir = 3
+        console.log("S")
+    }
+    else if (e.keyCode == '65') {
+       // left arrow
+        console.log("A")
+        //loc[1]--
+	2dir = 2
+    }
+    else if (e.keyCode == '68') {
+       // right arrow
+       console.log('D')
+       //loc[1]++
+       2dir = 0
+    }
     else if (e.keyCode == '32') {
        alert("Paused\nScore: " + score)
        
@@ -477,17 +500,22 @@ var interval = window.setInterval(function(){
 	else if (direction == 2) { loc[1]--}
 	else if (direction == 3) { loc[0]++}
 	else if (direction == 1) { loc[0]--}
+	if (2dir == 0) { 2loc[1]++}
+	else if (2dir == 2) { 2loc[1]--}
+	else if (2dir == 3) { 2loc[0]++}
+	else if (2dir == 1) { 2loc[0]--}
 	/*if (aidir == 0) { ailoc[1]++}
 	else if (aidir == 2) { ailoc[1]--}
 	else if (aidir == 3) { ailoc[0]++}
 	else if (aidir == 1) { ailoc[0]--}
 	*/
 	ploc=loc.join()
-	aipos = ailoc.join()
+	2ploc = 2dir.join()
 	//console.log(ploc)
 	//console.log(loc)
 	try {
-		document.getElementById(ploc).checked
+		document.getElementById(ploc).checked = true
+		document.getElementById(2ploc).checked = true
 		/*document.getElementById(aipos).checked = true*/
 	}
 	catch {
@@ -498,7 +526,7 @@ var interval = window.setInterval(function(){
 		document.getElementById(ploc).checked = true
 		//console.log("YAY")
 		score++
-	} else if (document.getElementById(ploc).checked === true) {
+	} else if (document.getElementById(ploc).checked === true || document.getElementById(2ploc).checked === true) {
 		document.getElementById("result").innerHTML = "GAME OVER - SCORE: " + score + " - Click to restart"
 		clearInterval(interval)
 	}
