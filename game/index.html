@@ -426,7 +426,7 @@
 <br></div>
 <div id="result" onclick="location.reload();"></div>
 <script>
-var wloc = [15,15];
+var wploc = [15,15];
 var wdir = 2;
 document.getElementById("1,1").checked = true
 var score = 0
@@ -515,7 +515,7 @@ var interval = window.setInterval(function(){
 	//console.log(loc)
 	try {
 		document.getElementById(ploc).checked = true
-		document.getElementById(2ploc).checked = true
+		document.getElementById(wploc).checked = true
 		/*document.getElementById(aipos).checked = true*/
 	}
 	catch {
@@ -526,7 +526,7 @@ var interval = window.setInterval(function(){
 		document.getElementById(ploc).checked = true
 		//console.log("YAY")
 		score++
-	} else if (document.getElementById(ploc).checked === true || document.getElementById(2ploc).checked === true) {
+	} else if (document.getElementById(ploc).checked === true || document.getElementById(wploc).checked === true) {
 		document.getElementById("result").innerHTML = "GAME OVER - SCORE: " + score + " - Click to restart"
 		clearInterval(interval)
 	}
