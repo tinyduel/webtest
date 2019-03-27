@@ -518,8 +518,7 @@ var interval = window.setInterval(function(){
 		document.getElementById(wploc).checked = true
 		/*document.getElementById(aipos).checked = true*/
 		
-	}
-	catch {
+	} catch {
 		document.getElementById("result").innerHTML = "GAME OVER - SCORE: " + score + " - Click to restart"
 		clearInterval(interval)
 	}
