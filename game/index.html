@@ -522,7 +522,7 @@ var interval = window.setInterval(function(){
 		document.getElementById("result").innerHTML = "GAME OVER - SCORE: " + score + " - Click to restart"
 		clearInterval(interval)
 	}
-	} if (document.getElementById(ploc).checked === true) {
+	if (document.getElementById(ploc).checked === true) {
 		document.getElementById("result").innerHTML = "GAME OVER - SCORE: " + score + " - Click to restart"
 		clearInterval(interval)
 	}
