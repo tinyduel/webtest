@@ -527,7 +527,10 @@ var interval = window.setInterval(function(){
 		document.getElementById(wploc).checked = true
 		//console.log("YAY")
 		score++
-	} else if (document.getElementById(ploc).checked === true || document.getElementById(wploc).checked === true) {
+	} else if (document.getElementById(ploc).checked === true) {
+		document.getElementById("result").innerHTML = "GAME OVER - SCORE: " + score + " - Click to restart"
+		clearInterval(interval)
+	} else if (document.getElementById(wploc).checked === true) {
 		document.getElementById("result").innerHTML = "GAME OVER - SCORE: " + score + " - Click to restart"
 		clearInterval(interval)
 	}
