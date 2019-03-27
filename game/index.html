@@ -513,18 +513,19 @@ var interval = window.setInterval(function(){
 	wploc = wloc.join()
 	//console.log(ploc)
 	//console.log(loc)
-	if (document.getElementById(ploc).checked === true) {
-		document.getElementById("result").innerHTML = "GAME OVER - SCORE: " + score + " - Click to restart"
-		clearInterval(interval)
-	}
-	if (document.getElementById(wploc).checked === true) {
-		document.getElementById("result").innerHTML = "GAME OVER - SCORE: " + score + " - Click to restart"
-		clearInterval(interval)
-	}
+	
 	try {
-		document.getElementById(ploc).checked = true
-		document.getElementById(wploc).checked = true
+		//document.getElementById(ploc).checked = true
+		//document.getElementById(wploc).checked = true
 		/*document.getElementById(aipos).checked = true*/
+		if (document.getElementById(ploc).checked === true) {
+		document.getElementById("result").innerHTML = "GAME OVER - SCORE: " + score + " - Click to restart"
+		clearInterval(interval)
+		}
+		if (document.getElementById(wploc).checked === true) {
+		document.getElementById("result").innerHTML = "GAME OVER - SCORE: " + score + " - Click to restart"
+		clearInterval(interval)
+		}
 	}
 	catch {
 		document.getElementById("result").innerHTML = "GAME OVER - SCORE: " + score + " - Click to restart"
