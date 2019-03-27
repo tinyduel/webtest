@@ -519,8 +519,9 @@ var interval = window.setInterval(function(){
 		/*document.getElementById(aipos).checked = true*/
 		
 	} catch {
-		document.getElementById("result").innerHTML = "GAME OVER - SCORE: " + score + " - Click to restart"
-		clearInterval(interval)
+		//document.getElementById("result").innerHTML = "GAME OVER - SCORE: " + score + " - Click to restart"
+		//clearInterval(interval)
+		console.log("Fj")
 	}
 	if (document.getElementById(ploc).checked === true) {
 		document.getElementById("result").innerHTML = "GAME OVER - SCORE: " + score + " - Click to restart"
